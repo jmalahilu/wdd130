@@ -45,7 +45,12 @@ main {
 }
 aside {
   width: 20rem;
-  position: relative; 
+  position: relative;
+  margin: var(--margin-sm);
+  border: 1px solid var(--border-light);
+  padding: var(--padding-md);
+  background-color: var(--background-light);
+  color: var(--text-dark);
 }
 aside h2 {
   position: absolute;
