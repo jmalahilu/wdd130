@@ -1,26 +1,40 @@
+:root {
+  --primary-color: steelblue;
+  --secondary-color: white;
+  --text-dark: #333;
+  --background-light: #eee;
+  --border-light: #ccc;
+  --border-dark: #000;
+  --box-shadow-color: rgba(0, 0, 0, 0.3);
+
+  --padding-sm: 0.5rem;
+  --padding-md: 1rem;
+  --margin-sm: 1rem;
+  --max-content-width: 800px;
+}
 h1 {
-  color: steelblue;
+  color: var(--primary-color);
 }
 nav {
-  background-color: steelblue;
-  padding: 1rem;
+  background-color: var(--primary-color);
+  padding: var(--padding-md);
 }
 nav a {
-  color: white;
-  padding: 1rem;
+  color: var(--secondary-color);
+  padding: var(--padding-md);
   display: block;
 }
 main {
-  max-width: 800px;
+  max-width: var(--max-content-width);
   margin: 0 auto;
 }
 aside {
   width: 20rem;
-  margin: 1rem;
+  margin: var(--margin-sm);
   border: 1px solid #ccc;
-  padding: 1rem;
-  background-color: #eee;
-  color: #333;
+  padding: var(--padding-md);
+  background-color: var(--background-light);
+  color: var(--text-dark);
 }
 aside img {
   width: 200px;
@@ -29,15 +43,15 @@ aside img {
 main img {
   width: 150px;
   height: auto;
-  border: 1px solid steelblue;
-  padding: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--primary-color);
+  padding: var(--padding-sm);
+  box-shadow: 0 0 10px var(--box-shadow-color);
 }
 p {
   padding: 0px;
 }
 footer {
   margin-top: 15px;
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--border-dark);
   text-align: center;
 }
