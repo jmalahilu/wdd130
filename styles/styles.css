@@ -40,17 +40,17 @@ nav a {
   display: block;
 }
 main {
-  max-width: var(--max-content-width);
+  max-width: 840px;
   margin: 0 auto;
 }
 aside {
   width: 20rem;
-  position: relative;
-  margin: var(--margin-sm);
-  border: 1px solid var(--border-light);
-  padding: var(--padding-md);
-  background-color: var(--background-light);
-  color: var(--text-dark);
+  margin: 1rem;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
 }
 aside h2 {
   position: absolute;
@@ -75,7 +75,7 @@ main img {
   float: right;
 }
 p {
-  padding: 0px;
+  padding: 0;
 }
 footer {
   margin-top: 15px;
