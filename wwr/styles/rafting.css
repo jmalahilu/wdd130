@@ -30,28 +30,70 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: var(--accent2-color);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--accent2-color) 0%, #ffffff 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--primary-color);
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header img {
-    width: 80px; 
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+header img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     text-decoration: none;
     color: var(--primary-color);
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    background: transparent;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(63, 96, 163, 0.3);
+}
+
+nav a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(63, 96, 163, 0.2);
+}
+
+/* Add a subtle underline effect for current page */
+nav a.current {
+    background-color: rgba(63, 96, 163, 0.1);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 
@@ -119,9 +161,62 @@ h1, h2 {
     text-align: justify;
 }
 
+/* Adventures Section Styling */
+.adventure {
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(63, 96, 163, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 12px;
+    margin: var(--spacing-lg) 0;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-sm);
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    padding: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adventure-gallery figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.adventure-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.adventure-gallery figure:hover img {
+    transform: scale(1.05);
+}
+
+.adventure-gallery figcaption {
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, var(--accent2-color) 0%, #ffffff 100%);
+    border-top: 2px solid var(--secondary-color);
+}
+
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: var(--spacing-md) var(--spacing-lg);
     margin-top: var(--spacing-lg);
@@ -130,10 +225,141 @@ footer {
     width: 100%; 
 }
 
-footer a img {
-    width: 30px; 
-    margin: 0 5px;
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
-.socialmedia a {
+
+.sociallinks {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+.sociallinks a {
     text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sociallinks a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.sociallinks img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.sociallinks a:hover img {
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+/* Responsive Adventures Section */
+@media (max-width: 1024px) {
+    .adventure-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .adventure-gallery img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .adventure-gallery img {
+        height: 160px;
+    }
+    
+    .adventure-gallery figcaption {
+        font-size: 0.85rem;
+        padding: var(--spacing-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .adventure-gallery img {
+        height: 200px;
+    }
+    
+    .adventure {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-sm) 0;
+    }
+    
+    /* Responsive footer */
+    footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+        padding: var(--spacing-sm);
+    }
+    
+    .sociallinks {
+        gap: var(--spacing-md);
+    }
+    
+    .sociallinks img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Responsive header design */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--spacing-sm);
+        text-align: center;
+        padding: var(--spacing-sm);
+    }
+    
+    header img {
+        width: 60px;
+        justify-self: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+    
+    nav a {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: var(--spacing-xs);
+    }
+    
+    header img {
+        width: 50px;
+    }
+    
+    nav ul {
+        gap: 4px;
+    }
+    
+    nav a {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
 }
