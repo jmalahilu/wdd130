@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Fundamentals Quiz</title>
+    <link rel="stylesheet" href="quiz.html">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h1>HTML & CSS Fundamentals Quiz </h1>
+
+        <form action="/submit-quiz" method="POST">
+
+            <div class="question-group">
+                <label>
+                    What **HTML** attribute is used to specify a unique identifier for an element? (e.g., used to target
+                    an element with CSS or JavaScript)
+                    <input type="text" name="q1" id="q1" required placeholder="Enter attribute name here...">
+                </label>
+            </div>
+
+            <div class="question-group">
+                <label>
+                    Describe the primary purpose of **CSS** in web development, and briefly explain the concept of the
+                    CSS **Box Model**.
+                    <textarea name="q2" id="q2" required placeholder="Write your short answer here..."></textarea>
+                </label>
+            </div>
+
+            <div class="question-group">
+                <label>
+                    Which **HTML** tag is used to create an unordered list?
+                    <select name="q3" id="q3" required>
+                        <option value="" selected disabled>Choose One...</option>
+
+                        <option value="ol">The &lt;ol&gt; tag</option>
+                        <option value="ul">The &lt;ul&gt; tag</option>
+                        <option value="li">The &lt;li&gt; tag</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="question-group">
+                <label>
+                    When using a `
+                    <meta>` tag for setting the character set, what is the most recommended **number** value for the
+                    `charset` attribute?
+                    <input type="number" name="q4" id="q4" required min="1" max="65535"
+                        placeholder="Enter an integer value (e.g., 8)">
+                </label>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
