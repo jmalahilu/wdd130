@@ -4,55 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessicah Shitangale Malahilu WDD 130 </title>
+    <title>Whitewater Rafting Adventures | WRR</title>
     <meta name="description"
-        content="Jessicah Shitangale Malahilu WDD130 course home page. Links to projects and course info.">
-    <meta name="author" content="Jessicah Shitangale Malahilu">
-    <link rel="stylesheet" href="styles/styles.css">
+        content="Experience thrilling whitewater rafting adventures with professional guides and safe, unforgettable experiences.">
+    <meta name="author" content="Whitewater Rafting Adventures">
+    <link rel="stylesheet" href="rafting.css">
 </head>
 
 <body>
     <header>
+        <img src="images/logo.png" alt="Whitewater Rafting Adventures Logo" class="logo">
         <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
-
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <div class="grid">
-        <main>
-            <h1>Jessicah Shitangale Malahilu |WDD 130</h1>
-            <img src="images/profile.jpeg" alt="Portrait of Jessicah Shitangale Malahilu">
-            <p>Hello! My name is Jessicah Shitangale Malahilu. I am from Nairobi, Kenya. I love making good
-                memories,enjoying icecream, and spending time with my family. I am excited to learn web development and grow
-                my
-                skills through this course!</p>
-            <ul class="box">
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/accra-ghana-temple" target="_blank">Accra
-                        Ghana
-                        Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/aba-nigeria-temple" target="_blank">Aba
-                        Nigeria
-                        Temple</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/temples/details/rome-italy-temple" target="_blank">Rome
-                        Italy
-                        Temple</a></li>
-            </ul>
-        </main>
-        <aside>
-            <h2>Kenya</h2>
-            <img src="images/kenya.jpg" alt="Scenic view of Kenya's landscape">
-            <p>
-                Kenya is a country in East Africa on the equator with coastline along the Indian Ocean .
-                Nairobi is the capital and a regional economic hub.
-            </p>
-        </aside>
-    </div>
+    <main>
+        <section class="hero">
+            <img src="hero.jpg" alt="Whitewater rafting adventure on river">
+            <h1>Experience the Thrill of Whitewater Rafting</h1>
+        </section>
+
+        <section class="cta">
+            <p>Ready to take on the rapids? Book your adventure today and create unforgettable memories with us!</p>
+            <a href="trips.html" class="cta-button">Explore Our Trips</a>
+        </section>
+
+        <section class="content-grid">
+            <article class="content-card">
+                <img src="family-rafting.jpg" alt="Family enjoying rafting together">
+                <div class="card-content">
+                    <h2>Family-Friendly Adventures</h2>
+                    <p>Perfect for all ages and skill levels, our guided rafting tours offer safe, exciting experiences
+                        for families looking to bond and explore nature's beauty. Our expert guides ensure everyone has
+                        a fantastic time on the water.</p>
+                </div>
+            </article>
+
+            <article class="content-card">
+                <img src="extreme-rafting.jpg" alt="Experienced rafters navigating intense rapids">
+                <div class="card-content">
+                    <h2>Extreme Whitewater Challenges</h2>
+                    <p>For the adventurous at heart, we offer thrilling Class IV and Class V rapids that will test your
+                        courage and skills. Join our expert team as you navigate some of the most challenging and
+                        rewarding whitewater in the region.</p>
+                </div>
+            </article>
+
+            <article class="content-card">
+                <img src="scenic-river.jpg" alt="Scenic river landscape at sunset">
+                <div class="card-content">
+                    <h2>Scenic River Tours</h2>
+                    <p>Experience the tranquility and natural beauty of our scenic river tours. Perfect for nature
+                        lovers and photographers, these peaceful journeys offer breathtaking views and opportunities to
+                        connect with the environment.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with special offers, trip schedules, and rafting tips!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+
     <footer>
-        <p>©2025 Jessicah Shitangale Malahilu | Nairobi, Kenya</p>
+        <p>&copy; 2025 Whitewater Rafting Adventures. All rights reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </footer>
 </body>
 
