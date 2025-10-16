@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Rafter's Edge | Get In Touch For Your Rafting Trip</title>
+    <meta name="description"
+        content="Have questions about our white water rafting trips? Contact Rafter's Edge today via phone, email, or visit our office. We're here to help you plan your adventure!">
+    <meta name="author" content="Jessicah Malahilu">
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Rafter's Edge Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="images/hero_rafting.jpg" alt="Rafting on a beautiful river">
+            <h1>Ready for Adventure? Contact Us!</h1>
+
+            <article>
+                <img src="images/happy_client.jpg" alt="Happy client smiling after a rafting trip">
+                <p>
+                    We're thrilled you're considering a trip with Rafter's Edge! Whether you have questions about
+                    trip difficulty, group rates, or what to bring, our friendly team is here to help. Reach out
+                    to us using any of the methods below.
+                </p>
+            </article>
+        </div>
+
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <div class="contact-grid">
+                <div class="method">
+                    <h3>Office Address</h3>
+                    <p>123 River Run Lane, Canyonlands, UT 84501</p>
+                </div>
+                <div class="method">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                </div>
+                <div class="method">
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@raftersedge.com">info@raftersedge.com</a></p>
+                </div>
+            </div>
+
+            <div class="location-map">
+                <h3>Find Our Office</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000!2d-110.000000!3d38.500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzhCsDMwJzAwLjAiTiAxMTDCsDAwJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1678888888888"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of Rafter's Edge Office Location">
+                </iframe>
+            </div>
+
+        </section>
+
+        <section class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>Purpose of Message:</label>
+                <div class="radio-group">
+                    <input type="radio" id="inquiry" name="purpose" value="general_inquiry" required>
+                    <label for="inquiry">General Inquiry</label><br>
+
+                    <input type="radio" id="reservation" name="purpose" value="reservation_question">
+                    <label for="reservation">Reservation Question</label><br>
+
+                    <input type="radio" id="suggestion" name="purpose" value="website_suggestion">
+                    <label for="suggestion">Website Suggestion</label>
+                </div>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="newsletter-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2025 Rafter's Edge | [Location, e.g., Canyonlands, UT]</p>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.svg" alt="Facebook icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.svg" alt="Twitter icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.svg" alt="Instagram icon">
+                </a>
+            </nav>
+        </footer>
+
+</body>
+
+</html>
